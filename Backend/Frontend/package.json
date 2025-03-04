@@ -1,37 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
-const App = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:5000/api/data')
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the data!', error);
-      });
-  }, []);
-
-  return (
-    <div className="App">
-      <h1>AI-Powered Web Crawler Dashboard</h1>
-      {data.length > 0 ? (
-        data.map((page, index) => (
-          <div key={index}>
-            <h2>{page.title}</h2>
-            <p><strong>Category:</strong> {page.ai_analysis}</p>
-            <p><strong>Sentiment:</strong> {page.ai_analysis}</p>
-            <p><strong>Summary:</strong> {page.ai_analysis}</p>
-            <p><strong>Metadata:</strong> {page.metadata.join(', ')}</p>
-          </div>
-        ))
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
-  );
-};
-
-export default App;
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
