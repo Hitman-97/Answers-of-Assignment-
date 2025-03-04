@@ -1,0 +1,47 @@
+
+2. Start the development server:
+
+
+3. Visit `http://localhost:3000` to view the dashboard.
+
+
+2. Run the Flask app:
+
+
+### Web Crawling
+
+1. Navigate to `crawlers/scrapy_project` and run the Scrapy spider:
+
+
+2. This will start crawling the web and extract data into `extracted_data.json`.
+
+### Frontend
+
+1. Navigate to `frontend` and install dependencies:
+
+
+2. Start the React development server:
+
+
+
+### Data Processing
+
+To process the crawled data, run:
+
+
+
+This will analyze the data using OpenAI's GPT model and save it to `analyzed_data.json`.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+git init
+git add .
+git commit -m "Initial commit"
+
+git remote add origin https://github.com/yourusername/AI-Powered-Web-Crawler.git
+git push -u origin master
+
+
